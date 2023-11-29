@@ -13,6 +13,8 @@ NPMURL="https://github.com/NginxProxyManager/nginx-proxy-manager"
 cd $TEMPDIR
 touch $TEMPLOG
 
+runcmd 'useradd npm'
+
 # Helpers
 log() {
   logs=$(cat $TEMPLOG | sed -e "s/34/32/g" | sed -e "s/info/success/g");

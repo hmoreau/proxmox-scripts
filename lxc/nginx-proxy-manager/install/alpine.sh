@@ -89,9 +89,10 @@ runcmd apk upgrade
 
 # Install dependancies
 log "Installing dependencies"
-runcmd 'apk add openresty nodejs yarn openssl apache2-utils logrotate $DEVDEPS'
+runcmd 'apk add openresty yarn openssl apache2-utils logrotate $DEVDEPS'
 runcmd 'apk add python3=3.10.13-r0 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.17/main'
 runcmd 'apk add python3-dev=3.10.13-r0 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.17/main'
+runcmd 'apk add nodejs=16.20.2-r0 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.16/main'
 
 # Setup python env and PIP
 log "Setting up python"

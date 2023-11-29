@@ -13,8 +13,6 @@ NPMURL="https://github.com/NginxProxyManager/nginx-proxy-manager"
 cd $TEMPDIR
 touch $TEMPLOG
 
-runcmd 'useradd npm'
-
 # Helpers
 log() {
   logs=$(cat $TEMPLOG | sed -e "s/34/32/g" | sed -e "s/info/success/g");
@@ -88,6 +86,10 @@ log "Updating container OS"
 echo "fs.file-max = 65535" > /etc/sysctl.conf
 runcmd apk update
 runcmd apk upgrade
+
+# Create npm user
+log "Create npm user"
+runcmd 'useradd npm'
 
 # Install dependancies
 log "Installing dependencies"

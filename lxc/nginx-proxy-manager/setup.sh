@@ -19,7 +19,7 @@ if [ "$DISTRO" = "ubuntu" ]; then
 fi
 
 rm -rf $TMP
-wget -O "$TMP" "$URL/$INSTALL_SCRIPT.sh"
+wget --no-cache -O "$TMP" "$URL/$INSTALL_SCRIPT.sh"
 
 chmod +x "$TMP"
 

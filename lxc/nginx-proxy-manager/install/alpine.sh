@@ -89,7 +89,8 @@ runcmd apk upgrade
 
 # Create npm user
 log "Create npm user"
-runcmd 'adduser -H -D -S npm'
+runcmd 'addgroup -g 111 npm'
+runcmd 'adduser npm -S -G npm -u 111'
 
 # Install dependancies
 log "Installing dependencies"

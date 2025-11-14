@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-export EPS_BASE_URL=${EPS_BASE_URL:-https://raw.githubusercontent.com/hmoreau/proxmox-scripts/main}
+export EPS_BASE_URL=${EPS_BASE_URL:-https://github.com/hmoreau/proxmox-scripts/raw/refs/heads/main/}
 
 export EPS_CT_INSTALL=false
 
